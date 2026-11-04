@@ -23,6 +23,15 @@ They live on this `pr-assets` branch so binary files do not enter the PR diff.
 - No screenshot was edited or composed; only the viewport was cropped to the
   screenshot.
 
+### Dark run
+
+A second pass repeated the whole set with the extension in dark appearance
+(`appearance.colorScheme: 'dark'`, `emulateMedia({ colorScheme: 'dark' })`) on
+`test-pages/host-theme-nav.html` — a fixture whose **own** dark mode is a class
+on `<html>`, toggled through its button. Same Chromium/extension/service-worker
+assertion, same zero console/page-error gate. The card drag moved the header
+from `(461,219)` to `(201,459)` in that run.
+
 ## One disclosure
 
 The translation text in the selection-card screenshots comes from a **local mock
@@ -41,3 +50,8 @@ extension.
 | `03-options-general.png` | Options page (general section) with the seeded engines. |
 | `04-options-providers.png` | Engine list: **「第三方服务」** badge on the third-party `anthropic-compatible` endpoint. |
 | `05-options-export-confirm.png` | The "export with keys" confirmation stating the JSON will contain plaintext API keys. |
+| `01-selection-card-dark.png` | Dark appearance: card anchored under the selected paragraph on a dark host page. |
+| `02-selection-card-dragged-dark.png` | Dark appearance: the same card after dragging it by its header. |
+| `03-options-general-dark.png` | Dark appearance: options page, general section. |
+| `04-options-providers-dark.png` | Dark appearance: engine list with the 「第三方服务」 badge. |
+| `05-options-export-confirm-dark.png` | Dark appearance: the export-with-keys confirmation. |
